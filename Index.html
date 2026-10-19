@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#111c37" />
+<title>FSB AI Competency Assessment — Khảo sát & Phân tích năng lực AI</title>
+<style>
+:root{--navy:#121d37;--navy2:#1d2e54;--accent:#e63958;--accent2:#fce8ed;--blue:#427dba;--ink:#25334e;--muted:#8490a3;--line:#e9edf4;--body:#f7f8fc;--white:#fff;--r:17px}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--body)}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}a{text-decoration:none;color:inherit}.app-shell{display:flex;min-height:100vh}.sidebar{width:252px;background:linear-gradient(165deg,#15213e,#0d1831);color:#e9efff;position:fixed;top:0;left:0;bottom:0;display:flex;flex-direction:column;z-index:20;box-shadow:5px 0 25px #0b1a3110}.brand{padding:34px 27px 47px;border-bottom:1px solid #ffffff12}.brand-logo{font-size:42px;letter-spacing:-5px;line-height:1;font-weight:950;color:#fff;font-family:Arial,sans-serif;font-style:italic}.brand-dot{color:#f04765}.brand-sub{font-size:9px;letter-spacing:2.25px;font-weight:800;color:#bac6dd;margin-top:14px}.nav-section{padding:26px 27px 13px;font-size:10px;font-weight:700;letter-spacing:1.7px;color:#7080a0}.sidenav{padding:0 12px;display:flex;flex-direction:column;gap:7px}.nav-link{width:100%;display:flex;align-items:center;text-align:left;gap:13px;color:#aab7d0;background:transparent;border:0;padding:14px 13px;border-radius:11px;font-size:13px;font-weight:600;transition:.15s}.nav-link.active{background:linear-gradient(95deg,#e13b59,#c32b51);color:#fff;box-shadow:0 5px 16px #ed426a32}.nav-link:hover:not(.active){background:#ffffff13;color:white}.nav-ico{font-size:20px;width:23px;text-align:center;font-weight:400}.pill-xs{margin-left:auto;font-size:8px;background:#ffffff29;border-radius:4px;padding:3px 5px;color:#fff}.sidebar-bottom{margin-top:auto;padding:20px 24px 26px;border-top:1px solid #ffffff13}.side-badge{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;color:#e3eafa}.status-dot{width:7px;height:7px;border-radius:50%;background:#53cdad;box-shadow:0 0 0 4px #53cdad1f}.sidebar-bottom small{display:block;color:#8090ae;font-size:11px;line-height:1.7;margin:13px 0 15px}.text-link{background:none;border:0;color:#bac8ea;font-size:12px;padding:0;text-decoration:underline}.main-wrap{margin-left:252px;width:calc(100% - 252px);min-height:100vh;display:flex;flex-direction:column}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:1px solid var(--line);padding:0 39px}.breadcrumb{font-size:12px;color:#9da8bb}.breadcrumb strong{color:#58647b}.top-actions{display:flex;align-items:center;gap:20px}.top-label{font-size:10px;letter-spacing:1px;font-weight:700;color:#94a0b2}.auth-badge{font-size:11px;background:#f0f3fa;border:1px solid #e5eaf3;padding:8px 12px;border-radius:20px;color:#677692}.avatar{width:35px;height:35px;border-radius:50%;background:#233b69;color:#fff;display:grid;place-items:center;font-size:10px;font-weight:900;letter-spacing:-1px}.menu-btn{display:none;background:transparent;border:0;font-size:22px;color:var(--ink)}.content{padding:34px 39px 48px;max-width:1800px;width:100%;margin:0 auto;flex:1}.page{display:none}.page.active{display:block}.eyebrow{font-size:10px;letter-spacing:2.1px;font-weight:800;color:#e34161;margin-bottom:13px}.heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:28px}h1{font-size:30px;line-height:1.22;letter-spacing:-1px;color:#172744;margin:0 0 10px;font-weight:800}.subheading{font-size:13px;line-height:1.6;color:#8995a8;margin:0;max-width:770px}.head-actions{display:flex;gap:11px;padding-top:19px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:9px;font-size:12px;font-weight:750;white-space:nowrap;min-height:40px;border:1px solid transparent;transition:.15s}.btn:hover:not(:disabled){transform:translateY(-1px)}.btn-primary{background:#db3658;color:#fff;box-shadow:0 4px 11px #d936581b}.btn-light{background:#fff;border-color:#e2e7f1;color:#5a6780}.filters-bar{display:flex;align-items:center;gap:16px;padding:15px 17px;background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:20px;flex-wrap:wrap}.filter-tag{font-size:10px;font-weight:900;letter-spacing:.8px;color:#9aa6b8;margin-right:auto}.filters-bar label{display:flex;gap:8px;align-items:center;font-size:11px;color:#7f8a9e;font-weight:600}.filters-bar select{border:1px solid #e4e9f1;background:#fcfdff;color:#42506b;min-width:145px;max-width:230px;padding:9px 10px;border-radius:7px;font-size:11px}.filter-trailing{font-size:10px;color:#a0abbd}.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;margin-bottom:19px}.kpi-card{position:relative;min-height:132px;border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:21px 22px;overflow:hidden}.kpi-card.featured{border-color:#fbdbe3;background:linear-gradient(117deg,#fff 48%,#fff6f8 100%)}.kpi-caption{font-size:10px;letter-spacing:1.1px;color:#8b97aa;font-weight:800}.kpi-number{font-size:31px;letter-spacing:-1px;font-weight:850;color:#1e304d;margin-top:14px;line-height:1}.kpi-foot{color:#a1aabc;margin-top:11px;font-size:10.5px}.kpi-decor{position:absolute;right:15px;top:20px;font-size:26px;color:#e6eaf3}.featured .kpi-decor{color:#f3bccb}.analysis-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:18px;margin-bottom:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 23px;box-shadow:0 4px 25px #1a315308}.panel-header{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.panel-kicker{font-size:9px;letter-spacing:1.7px;color:#d83a5b;font-weight:900;margin-bottom:8px}.panel h2{font-size:16px;letter-spacing:-.25px;margin:0 0 6px;color:#22304e}.panel p{font-size:11.5px;color:#939fb0;line-height:1.6;margin:0}.chip{background:#fff1f4;color:#e34564;border-radius:17px;font-size:9px;letter-spacing:.6px;font-weight:800;padding:7px 10px;white-space:nowrap}.chip.alt{background:#edf4fd;color:#4779b9}.radar-legend{display:flex;justify-content:center;gap:26px;align-items:center;font-size:10px;color:#69758c;margin:19px 0 0}.radar-legend span{display:flex;gap:7px;align-items:center}.legend-mark{height:9px;width:9px;border-radius:3px;display:inline-block}.legend-mark.pink{background:#df3e62}.legend-mark.blue{background:#6c9bd1}.radar-canvas{height:355px;display:grid;place-items:center;padding:0 2px}.radar-canvas svg{width:100%;max-height:355px;overflow:visible}.chart-note{border-top:1px solid #edf0f5;padding-top:15px;font-size:10px;line-height:1.6;color:#a2abba}.barlist{display:flex;flex-direction:column;gap:22px;margin:30px 0 30px;min-height:320px}.bar-item{display:flex;flex-direction:column;gap:9px}.bar-top{display:flex;justify-content:space-between;gap:18px;font-size:11px;line-height:1.45}.bar-top span{color:#65718a;max-width:85%}.bar-top b{color:#273754;font-size:11px;white-space:nowrap}.bar-bg{height:7px;border-radius:10px;background:#edf1f7;overflow:hidden}.bar-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#d92f53,#fa8aa0);transition:width .3s}.bottom-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:18px;margin-bottom:18px}.case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}.case-mini{padding:13px;border:1px solid #edf1f5;border-radius:10px;background:#fafbfe;min-height:110px}.case-code{font-size:10px;font-weight:800;color:#99a5b7}.case-value{font-size:23px;font-weight:850;color:#233b64;margin:12px 0 10px}.case-line{height:5px;border-radius:3px;background:#e7edf5;overflow:hidden}.case-line i{height:100%;display:block;background:#5985bd}.barriers-list{display:flex;flex-direction:column;gap:13px;margin-top:20px;min-height:134px}.barrier-item{display:flex;align-items:flex-start;gap:12px;font-size:11px;line-height:1.5}.barrier-rank{flex:none;width:22px;height:22px;display:grid;place-items:center;border-radius:7px;color:#e34a67;background:#fff0f3;font-weight:800}.barrier-text{flex:1;color:#6e7c94}.barrier-item strong{color:#23395f;white-space:nowrap}.insight-panel{background:linear-gradient(120deg,#fbfdff,#fff)}.insight-title{font-size:14px;font-weight:800;color:#273953;margin-bottom:11px}.insight-panel>p{font-size:12px;color:#68778f}.axis-table{border-collapse:collapse;width:100%;margin-top:18px;font-size:11px}.axis-table th,.axis-table td{text-align:left;border-bottom:1px solid #eef1f5;padding:10px}.axis-table th{color:#9ca7b8;text-transform:uppercase;font-size:9px;letter-spacing:1px}.axis-table td:last-child{text-align:right;font-weight:750}.notice{padding:14px 17px;background:#fff8e9;border:1px solid #f5dfb4;border-radius:10px;margin-bottom:17px;color:#8c6323;font-size:12px}.notice[hidden], [hidden]{display:none!important}.login-panel{max-width:930px;min-height:200px;margin:35px auto 20px;background:#fff;border:1px solid #e6ebf4;border-radius:17px;padding:28px;display:grid;grid-template-columns:70px 1fr;gap:8px 20px;align-items:center}.lock-symbol{width:67px;height:67px;border-radius:17px;background:#fff0f4;color:#de3c5d;display:grid;place-items:center;font-size:35px}.login-panel h2{font-size:20px;margin:0 0 10px;color:#1e3152}.login-panel p{font-size:12px;line-height:1.6;color:#8390a4;margin:0}.login-panel form{grid-column:2;display:flex;gap:10px;margin-top:14px}.login-panel input{border:1px solid #e2e9f1;border-radius:9px;padding:11px 12px;min-width:220px;flex:1}.form-error{font-size:12px;color:#cb3453!important;margin-top:13px!important}.login-panel .form-error{grid-column:2}.survey-time{background:#fff;border:1px solid var(--line);padding:11px 16px;border-radius:12px;color:#697b95;font-size:11px}.survey-intro{border:1px solid #dfeafa;background:linear-gradient(110deg,#f4f8ff,#fff);border-radius:13px;display:flex;gap:15px;align-items:flex-start;padding:19px 23px;margin-bottom:19px}.survey-intro-icon{font-size:23px;color:#4d79b7}.survey-intro strong{display:block;font-size:13px;color:#35466a;margin-bottom:5px}.survey-intro p{font-size:11.5px;line-height:1.6;color:#7e8da5;margin:0}.survey-card{border:1px solid var(--line);background:#fff;border-radius:16px;max-width:1000px;margin:auto;padding:26px 30px}.step-header{display:flex;justify-content:space-between;align-items:center}.step-label{font-size:10px;color:#dc3b5e;font-weight:900;letter-spacing:1.4px}.step-header h2{font-size:21px;color:#1c2e4d;margin:9px 0}.step-header p{color:#8e99ac;font-size:12px;margin:0}.progress-pct{font-size:22px;color:#e23a5d;font-weight:850}.progress{height:6px;background:#edf0f6;border-radius:10px;overflow:hidden;margin-top:22px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#e23b60,#fc94a8);transition:width .25s}.survey-questions{margin-top:9px}.question{padding:23px 0;border-bottom:1px solid #edf1f6}.question-head{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px}.question-id{background:#f0f4fa;border-radius:5px;color:#71809b;font-size:10px;font-weight:850;padding:5px 7px;flex:none}.question-label{font-size:13px;line-height:1.7;color:#2e3d57;font-weight:650}.star{color:#e53d5f;margin-left:5px}.question-note{font-size:10px;color:#94a0b0;margin:6px 0 0 47px}.choice-list{display:grid;grid-template-columns:1fr;gap:8px;padding-left:46px}.choice{display:flex;align-items:flex-start;gap:10px;border:1px solid #e9edf4;border-radius:9px;padding:11px 13px;color:#64748e;font-size:12px;line-height:1.5;cursor:pointer;background:#fff}.choice.checked{border-color:#e85a75;background:#fff5f7;color:#384964}.choice input{accent-color:#dc3d60;margin-top:2px}.question textarea,.question .text-answer{margin-left:46px;width:calc(100% - 46px);min-height:50px;border:1px solid #e3e9f1;border-radius:9px;padding:13px;font-size:12px;color:#34425d;outline:none;resize:vertical}.question textarea{min-height:94px}.question textarea:focus,.question .text-answer:focus{border-color:#df4165}.survey-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:24px}.survey-footer>div:first-child{font-size:10px;color:#9aabbc}.draft-mark{color:#56bfa2}.survey-controls{display:flex;gap:9px}.done-panel{max-width:680px;padding:58px 30px;background:#fff;border-radius:16px;border:1px solid var(--line);text-align:center;margin:30px auto}.done-panel .done-icon{width:70px;height:70px;display:grid;place-items:center;margin:0 auto 19px;border-radius:50%;background:#e8fbf2;color:#2fb484;font-size:40px}.done-panel h2{font-size:23px;color:#1f3556}.done-panel p{font-size:13px;color:#8b9aac;line-height:1.7;margin:15px auto 25px;max-width:480px}.data-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-bottom:18px}.muted{color:#8392a9!important;font-size:12px!important;line-height:1.7!important}.upload-box{border:2px dashed #dee5ef;border-radius:12px;background:#fafbfe;text-align:center;padding:28px 16px;margin:22px 0 15px}.upload-ico{font-size:34px;color:#e03d62}.upload-box strong{display:block;font-size:13px;margin:6px 0;color:#52627d}.upload-box p{font-size:11px;margin:4px 0 15px;color:#99a5b5}.upload-box input{font-size:11px;max-width:100%}.import-actions{display:flex;gap:9px;flex-wrap:wrap}.import-feedback{font-size:12px;line-height:1.6;color:#64738d;margin-top:16px}.import-feedback.error{color:#ca3c58}.action-stack{display:flex;flex-direction:column;gap:11px;margin-top:26px}.action-link{display:block;text-align:left;border:1px solid #e6eaf3;background:#fbfcff;border-radius:10px;color:#425979;font-size:12px;font-weight:650;padding:16px;cursor:pointer}.action-link:hover{border-color:#ee9aac}.security-note{background:#f5f8fe;border-radius:9px;color:#69809f;padding:15px;line-height:1.65;margin-top:22px;font-size:11px}.table-wrap{overflow:auto;margin-top:20px}.data-table{width:100%;border-collapse:collapse;font-size:11px}.data-table th,.data-table td{text-align:left;padding:12px 9px;border-bottom:1px solid #eff1f6}.data-table th{font-size:9px;color:#8898ae;letter-spacing:.8px;text-transform:uppercase}.data-locked{text-align:center;max-width:760px;margin:auto;padding:55px 24px}.data-locked p{margin:12px auto 23px}.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}.guide-card{min-height:205px}.guide-number{font-size:24px;color:#e44b6b;font-weight:900;margin-bottom:15px}.guide-card p{font-size:12px;line-height:1.85;color:#63728c}.operational-list{font-size:12px;line-height:2.6;color:#62708a;padding-left:19px}.footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#a6b0c1;font-size:10px;padding:17px 39px}.toast{position:fixed;bottom:22px;right:22px;padding:14px 18px;color:#fff;background:#1c3153;box-shadow:0 10px 35px #0d264034;border-radius:10px;font-size:12px;max-width:390px;opacity:0;pointer-events:none;transform:translateY(10px);transition:.2s;z-index:90}.toast.show{opacity:1;transform:translateY(0)}.empty-chart{color:#a0abbd;font-size:12px;text-align:center;padding:55px 15px}.bar-note{font-size:10px;color:#a1aebf}
+@media(max-width:1300px){.content{padding:28px}.topbar{padding:0 28px}.kpi-grid{gap:10px}.kpi-card{padding:19px 15px}.filters-bar{gap:10px}.filter-trailing{display:none}.case-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1050px){.sidebar{width:218px}.main-wrap{margin-left:218px;width:calc(100% - 218px)}.analysis-grid,.bottom-grid,.data-grid{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.radar-canvas{height:380px}.radar-canvas svg{max-height:380px}.top-label{display:none}}
+@media(max-width:720px){.sidebar{transform:translateX(-100%);transition:.2s;width:245px}.sidebar.open{transform:translateX(0)}.main-wrap{margin:0;width:100%}.topbar{height:62px;padding:0 17px}.menu-btn{display:block}.top-actions{gap:9px}.avatar{display:none}.content{padding:23px 15px}.heading-row{display:block}h1{font-size:25px}.head-actions{padding-top:17px;flex-wrap:wrap}.kpi-grid{gap:10px}.kpi-card{min-height:120px;padding:18px 13px}.kpi-caption{font-size:8px}.kpi-number{font-size:28px}.kpi-foot{font-size:9px}.panel{padding:19px 14px}.radar-canvas{height:290px}.radar-canvas svg{max-height:290px}.filters-bar{display:block}.filters-bar label{margin-top:13px;justify-content:space-between}.filters-bar select{min-width:60%;max-width:70%}.survey-card{padding:18px 14px}.choice-list{padding-left:0}.question textarea,.question .text-answer{margin-left:0;width:100%}.survey-footer{display:block}.survey-controls{margin-top:17px;justify-content:space-between}.survey-intro{padding:15px}.guide-grid{grid-template-columns:1fr}.login-panel{display:block;padding:22px}.login-panel form{display:flex;flex-direction:column}.login-panel input{min-width:0}.login-panel .lock-symbol{margin-bottom:12px}.footer{display:block;padding:18px}.footer span{display:block;margin-bottom:7px}.barlist{min-height:auto}.case-grid{grid-template-columns:repeat(2,1fr)}}
+@media print{.sidebar,.topbar,.head-actions,.filters-bar,.footer,.toast,.login-panel,.btn{display:none!important}.main-wrap{margin:0;width:100%}.content{padding:5px}.page:not(#overview){display:none!important}#overview{display:block!important}#dashboardArea{display:block!important}.kpi-grid{grid-template-columns:repeat(4,1fr)}.analysis-grid,.bottom-grid{grid-template-columns:1fr 1fr}.panel,.kpi-card{break-inside:avoid;box-shadow:none}.radar-canvas{height:320px}.barlist{gap:13px;min-height:0}.chart-note{font-size:9px}}
+
+</style>
+
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">FSB<span class="brand-dot">.</span></div>
+      <div class="brand-sub">SURVEY INTELLIGENCE</div>
+    </div>
+    <div class="nav-section">KHÔNG GIAN LÀM VIỆC</div>
+    <nav class="sidenav" aria-label="Điều hướng chính">
+      <button class="nav-link" data-tab="overview"><span class="nav-ico">◫</span><span>Tổng quan đánh giá</span></button>
+      <button class="nav-link active" data-tab="survey"><span class="nav-ico">▤</span><span>Phiếu khảo sát AI</span><span class="pill-xs">LIVE</span></button>
+      <button class="nav-link" data-tab="data"><span class="nav-ico">▧</span><span>Quản lý dữ liệu</span></button>
+      <button class="nav-link" data-tab="guide"><span class="nav-ico">◇</span><span>Hướng dẫn & phương pháp</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-badge"><span class="status-dot"></span><span>FSB · Training Analytics</span></div>
+      <small>Đánh giá năng lực AI và nhu cầu bồi dưỡng theo từng nhóm công vụ.</small>
+      <div class="side-links"><button id="adminSessionBtn" class="text-link">Đăng nhập quản trị</button></div>
+    </div>
+  </aside>
+  <div class="main-wrap">
+    <header class="topbar">
+      <button id="menuBtn" class="menu-btn" aria-label="Mở menu">☰</button>
+      <div class="breadcrumb">FSB / <strong id="breadcrumbName">Khảo sát năng lực AI</strong></div>
+      <div class="top-actions"><span class="top-label">ĐÁNH GIÁ NĂNG LỰC AI · CẤP TỈNH</span><span id="authBadge" class="auth-badge">Chế độ khách</span><div class="avatar">FSB</div></div>
+    </header>
+    <main class="content">
+      <section id="overview" class="page">
+        <div class="heading-row">
+          <div><div class="eyebrow">TRAINING INTELLIGENCE / EXECUTIVE OVERVIEW</div><h1>Bức tranh năng lực AI</h1><p class="subheading">Tổng hợp mức độ sử dụng, năng lực tự đánh giá và nhu cầu đào tạo tại các sở, ban, ngành.</p></div>
+          <div class="head-actions"><button id="refreshBtn" class="btn btn-light">↻ Làm mới</button><button id="printBtn" class="btn btn-primary">▣ Xuất báo cáo PDF</button></div>
+        </div>
+        <div id="loginPanel" class="login-panel">
+          <div class="lock-symbol">◈</div><div><h2>Khu vực tổng hợp dành cho quản trị FSB</h2><p>Phản hồi khảo sát được lưu trong cơ sở dữ liệu. Đăng nhập để xem kết quả tổng hợp, biểu đồ radar và nhu cầu đào tạo.</p></div>
+          <form id="loginForm"><input type="password" id="adminPassword" placeholder="Mật khẩu quản trị" required autocomplete="current-password" minlength="12" /><button class="btn btn-primary" type="submit">Đăng nhập</button></form>
+          <p id="loginError" class="form-error" role="alert"></p>
+        </div>
+        <div id="dashboardArea" hidden>
+          <div class="filters-bar"><div class="filter-tag">◉ BỘ LỌC PHÂN TÍCH</div><label>Đơn vị <select id="filterOrg"><option value="">Tất cả cơ quan / đơn vị</option></select></label><label>Đối tượng <select id="filterRole"><option value="">Tất cả nhóm vị trí</option></select></label><span class="filter-trailing">Dữ liệu tổng hợp theo phản hồi hợp lệ</span></div>
+          <div id="smallSample" class="notice" hidden></div>
+          <div class="kpi-grid" id="kpiGrid">
+            <div class="kpi-card"><div class="kpi-caption">PHẢN HỒI HỢP LỆ</div><div class="kpi-number" id="kpiResponses">—</div><div class="kpi-foot">Khảo sát được ghi nhận</div><div class="kpi-decor">▤</div></div>
+            <div class="kpi-card"><div class="kpi-caption">CƠ QUAN / ĐƠN VỊ</div><div class="kpi-number" id="kpiOrgs">—</div><div class="kpi-foot">Đơn vị trong nhóm đã lọc</div><div class="kpi-decor">▥</div></div>
+            <div class="kpi-card"><div class="kpi-caption">SỬ DỤNG AI THƯỜNG XUYÊN</div><div class="kpi-number" id="kpiUsage">—</div><div class="kpi-foot">Dùng ≥ 4 ngày/tuần theo A06</div><div class="kpi-decor">◴</div></div>
+            <div class="kpi-card featured"><div class="kpi-caption">TRẮC NGHIỆM TÌNH HUỐNG</div><div class="kpi-number" id="kpiCases">—</div><div class="kpi-foot">Tỷ lệ đúng 8 câu chung (D01–D08)</div><div class="kpi-decor">✦</div></div>
+          </div>
+          <div class="analysis-grid">
+            <article class="panel radar-panel"><div class="panel-header"><div><div class="panel-kicker">COMPETENCY RADAR</div><h2>Biểu đồ Radar – 7 nhóm năng lực</h2><p>Tự đánh giá 0–4, trung bình các câu có áp dụng</p></div><span class="chip">THANG 0–4</span></div>
+              <div class="radar-legend"><span><i class="legend-mark pink"></i> Nhóm được lọc</span><span><i class="legend-mark blue"></i> Toàn bộ phản hồi</span></div>
+              <div id="radarChart" class="radar-canvas"></div>
+              <div class="chart-note">* Radar thể hiện năng lực <strong>tự đánh giá</strong>, không phải điểm kiểm tra thực hành. Mỗi trục có số trả lời hợp lệ riêng; không tính “Không thuộc phạm vi công việc” là 0 điểm.</div>
+            </article>
+            <article class="panel demand-panel"><div class="panel-header"><div><div class="panel-kicker">TRAINING DEMAND</div><h2>Chủ đề đào tạo được quan tâm</h2><p>Tỷ lệ người chọn trong E02 · Chọn tối đa 5</p></div><span class="chip alt">ƯU TIÊN</span></div><div id="demandBars" class="barlist"></div><div class="chart-note">* Câu hỏi đa lựa chọn: tổng tỷ lệ có thể vượt 100%.</div></article>
+          </div>
+          <div class="bottom-grid">
+            <article class="panel"><div class="panel-header"><div><div class="panel-kicker">KNOWLEDGE CHECK</div><h2>Kết quả xử lý tình huống thực tế</h2><p>Tỷ lệ trả lời đúng từng câu D01–D08 (tách biệt radar)</p></div></div><div id="caseBars" class="case-grid"></div></article>
+            <article class="panel"><div class="panel-header"><div><div class="panel-kicker">LEARNING NEEDS</div><h2>Rào cản khi ứng dụng AI</h2><p>Những khó khăn được lựa chọn nhiều nhất</p></div></div><div id="barriersList" class="barriers-list"></div></article>
+          </div>
+          <div class="panel insight-panel"><div class="insight-title">✧ Gợi ý thiết kế đào tạo từ dữ liệu</div><p id="insightText">Các khuyến nghị sẽ xuất hiện khi có đủ phản hồi hợp lệ; đây là quy tắc mô tả, không phải kết quả do AI sinh.</p><div id="axisTable"></div></div>
+        </div>
+      </section>
+      <section id="survey" class="page active">
+        <div class="heading-row"><div><div class="eyebrow">AI CAPABILITY & LEARNING NEEDS</div><h1>Khảo sát năng lực AI</h1><p class="subheading">Dành cho cán bộ, lãnh đạo và nhân sự chuyển đổi số tại các sở, ban, ngành cấp tỉnh.</p></div><div class="survey-time">◷ Khoảng 15–20 phút</div></div>
+        <div id="surveyDone" class="done-panel" hidden><span class="done-icon">✓</span><h2>Đã ghi nhận phản hồi của anh/chị</h2><p>Xin cảm ơn. Kết quả được sử dụng để phân tích nhu cầu đào tạo theo nhóm, không dùng để xếp hạng cá nhân.</p><button id="newSurveyBtn" class="btn btn-primary">Thực hiện phiếu mới</button></div>
+        <div id="surveyFormArea">
+          <div class="survey-intro"><div class="survey-intro-icon">✧</div><div><strong>Khảo sát phục vụ thiết kế chương trình đào tạo thực tiễn</strong><p>Không cần cung cấp họ tên, hồ sơ công vụ, dữ liệu bí mật hoặc thông tin cá nhân của người dân. Những câu hỏi không liên quan đến nhiệm vụ có thể chọn “Không thuộc phạm vi công việc”.</p></div></div>
+          <div class="survey-card"><div class="step-header"><div><span class="step-label" id="stepLabel">PHẦN A / 6</span><h2 id="stepTitle">Thông tin công tác</h2><p id="stepDesc">Thông tin phân nhóm nhằm thiết kế lộ trình học phù hợp.</p></div><div class="progress-pct" id="progressPct">0%</div></div><div class="progress"><div id="progressFill" class="progress-fill"></div></div><div id="surveyQuestions" class="survey-questions"></div><div class="survey-footer"><div><span class="draft-mark">●</span> <span id="draftLabel">Câu trả lời được lưu tạm trên thiết bị này</span></div><div class="survey-controls"><button id="prevBtn" class="btn btn-light">← Quay lại</button><button id="nextBtn" class="btn btn-primary">Tiếp tục →</button></div></div><p id="surveyError" class="form-error" role="alert"></p></div>
+        </div>
+      </section>
+      <section id="data" class="page">
+        <div class="heading-row"><div><div class="eyebrow">DATA GOVERNANCE</div><h1>Trung tâm dữ liệu</h1><p class="subheading">Nhập phản hồi từ CSV, kiểm tra trước khi ghi, xuất bản sao và kiểm soát lịch sử nhập.</p></div></div>
+        <div id="dataLocked" class="panel data-locked"><h2>Yêu cầu quyền quản trị</h2><p>Vào mục “Tổng quan đánh giá” và đăng nhập bằng mật khẩu quản trị.</p><button id="dataLoginBtn" class="btn btn-primary">Đến màn hình đăng nhập</button></div>
+        <div id="dataArea" hidden>
+          <div class="data-grid"><article class="panel"><div class="panel-kicker">IMPORT RESPONSES</div><h2>Nhập dữ liệu khảo sát</h2><p class="muted">Chọn tệp trả lời .csv, có tiêu đề cột là mã câu hỏi (A01, A02, C01...) hoặc [A01] trong tên cột. Không tải lại ngân hàng câu hỏi gốc như dữ liệu trả lời.</p><div class="upload-box"><div class="upload-ico">⇧</div><strong>Kéo thả hoặc chọn tệp phản hồi</strong><p>CSV UTF-8 · tối đa 700 KB/lượt</p><input type="file" id="uploadFile" accept=".csv,text/csv" /></div><div class="import-actions"><button id="previewImport" class="btn btn-light">Xem trước & kiểm tra</button><button id="confirmImport" class="btn btn-primary" disabled>Xác nhận nhập dữ liệu</button></div><div id="importResult" class="import-feedback"></div></article>
+          <article class="panel"><div class="panel-kicker">DATA EXPORT & BACKUP</div><h2>Trích xuất dữ liệu</h2><p class="muted">Chỉ quản trị viên đã đăng nhập mới tải được dữ liệu chi tiết. Hãy lưu file xuất ở nơi được cấp phép.</p><div class="action-stack"><a id="exportLink" class="action-link" href="#">↓ Xuất tất cả phản hồi · CSV</a><a id="templateLink" class="action-link" href="#">↓ Tải tệp mẫu nhập dữ liệu · CSV</a><button class="action-link" id="refreshBatches">↻ Cập nhật lịch sử nhập</button></div><div class="security-note">Phản hồi được lưu tập trung trong Google Sheets riêng tư trên tài khoản sở hữu website, không phụ thuộc vào trình duyệt người tham gia.</div></article></div>
+          <article class="panel"><div class="panel-kicker">AUDIT TRAIL</div><h2>Lịch sử nhập dữ liệu</h2><div id="batchTable" class="table-wrap muted">Chưa có đợt nhập nào.</div></article>
+        </div>
+      </section>
+      <section id="guide" class="page">
+        <div class="heading-row"><div><div class="eyebrow">ASSESSMENT METHODOLOGY</div><h1>Hướng dẫn & phương pháp đo lường</h1><p class="subheading">Nguyên tắc phân tích dựa trên cấu trúc khảo sát gốc của FSB.</p></div></div>
+        <div class="guide-grid"><article class="panel guide-card"><div class="guide-number">01</div><h2>Ba lớp đánh giá tách biệt</h2><p><b>Tự đánh giá C01–C12:</b> thang 0–4, loại câu không thuộc phạm vi công việc. <b>Tình huống D01–D08:</b> kiểm tra nhận thức qua 8 câu chung, tính tỷ lệ đúng. <b>Ứng dụng A/B:</b> phân bố mức độ sử dụng và minh chứng thực hành. Không cộng gộp các lớp này thành một điểm chứng nhận.</p></article><article class="panel guide-card"><div class="guide-number">02</div><h2>Radar Chart 7 năng lực</h2><p>Prompt & tương tác (C01–C02); Ứng dụng công vụ (C03,C06); Kiểm chứng & an toàn (C04,C07); Phân tích dữ liệu (C05); Quy trình & tự động hóa (C08,C09); Trợ lý tri thức (C10); Quản trị & lan tỏa (C11–C12). Điểm nhóm là bình quân theo người có câu trả lời hợp lệ.</p></article><article class="panel guide-card"><div class="guide-number">03</div><h2>Phân tuyến đối tượng</h2><p>Lãnh đạo/phó phòng và lãnh đạo cơ quan nhận thêm tình huống D09_LD và câu hỏi F01_LD. Nhân sự chuyên trách CNTT, chuyển đổi số và đổi mới sáng tạo nhận D10_CD và F02_CD. Chỉ 8 câu D01–D08 được dùng cho tỷ lệ tình huống chung.</p></article><article class="panel guide-card"><div class="guide-number">04</div><h2>Bảo vệ dữ liệu & diễn giải</h2><p>Không công bố nhóm có dưới 5 phản hồi. Thông tin mở có thể chứa dữ liệu nhạy cảm nên cần rà soát trước khi xuất/chia sẻ. Bộ câu hỏi nhằm chẩn đoán nhu cầu học, không phải công cụ chứng nhận năng lực hay xếp hạng cá nhân.</p></article></div>
+        <div class="panel"><div class="panel-kicker">OPERATIONAL CHECKLIST</div><h2>Trình tự sử dụng</h2><ol class="operational-list"><li>Triển khai website bằng Apps Script theo <b>HUONG_DAN_TRIEN_KHAI.md</b>, cấu hình mật khẩu quản trị trước khi công khai.</li><li>Gửi địa chỉ trang khảo sát cho cán bộ trong môi trường mạng được cấp phép.</li><li>Kiểm tra phản hồi đã được lưu; có thể nhập thêm tệp kết quả từ nguồn khác.</li><li>Quản trị đăng nhập, lọc theo sở/ban/ngành hoặc nhóm vị trí và xem Radar Chart.</li><li>Đối chiếu các trục năng lực với nhu cầu E02, rào cản E05 và ý kiến mở trước khi lập đề xuất.</li><li>Xuất PDF tổng hợp hoặc dữ liệu CSV, lưu bản báo cáo đã được duyệt theo quy trình đơn vị.</li></ol></div>
+      </section>
+    </main>
+    <footer class="footer"><span>© FSB · AI Competency Assessment</span><span>Dữ liệu thật · Không dùng điểm giả · Khảo sát phục vụ đào tạo</span></footer>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = v => String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = v => v===null||v===undefined ? '—' : String(v);
+const percent = n => n!==null&&n!==undefined&&Number.isFinite(Number(n))?Number(n).toLocaleString('vi-VN',{maximumFractionDigits:1})+'%':'—';
+let questions=[], axes=[], answers={}, currentStep=0, authenticated=false,csrf='', lastImport=null, latestDashboard=null;
+const STEPS=[{label:'A',title:'Hồ sơ & kinh nghiệm AI',desc:'Thông tin công tác không cần họ tên cá nhân.'},{label:'B',title:'Ứng dụng AI trong công việc',desc:'Mức độ sử dụng thực tế và kết quả đã đạt được.'},{label:'C',title:'Tự đánh giá năng lực AI',desc:'12 tiêu chí theo thang 0–4; lựa chọn đúng với khả năng hiện tại.'},{label:'D',title:'Xử lý tình huống công vụ',desc:'Chọn phương án phù hợp nhất; đáp án không hiển thị trước khi khảo sát.'},{label:'E',title:'Nhu cầu bồi dưỡng AI',desc:'Ưu tiên đào tạo gắn với công việc và bài toán thực tế.'},{label:'F',title:'Nhu cầu chuyên biệt theo vai trò',desc:'Nội dung bổ sung theo nhóm lãnh đạo hoặc chuyển đổi số.'}];
+function toast(msg){let x=$('#toast');x.textContent=msg;x.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>x.classList.remove('show'),3800)}
+// Frontend tương tác trực tiếp với Apps Script, không có URL API/khóa bí mật trong trình duyệt.
+function gas_(method,...args){
+  return new Promise((resolve,reject)=>{
+    if(!window.google?.script?.run){reject(Error('Cần mở website bằng đường link Apps Script đã triển khai.'));return;}
+    google.script.run.withSuccessHandler(resolve).withFailureHandler(e=>reject(Error(e?.message||String(e))))[method](...args);
+  });
+}
+async function api(path,opts={}){
+  const token=sessionStorage.getItem('fsb_admin_session')||'';
+  const payload=opts.body?JSON.parse(opts.body):{};
+  if(path==='/api/questions')return gas_('getQuestions');
+  if(path==='/api/me')return gas_('whoAmI',token);
+  if(path==='/api/login'){
+    const r=await gas_('adminLogin',payload.password);
+    sessionStorage.setItem('fsb_admin_session',r.csrf);return r;
+  }
+  if(path==='/api/logout'){
+    const r=await gas_('adminLogout',token);
+    sessionStorage.removeItem('fsb_admin_session');return r;
+  }
+  if(path.startsWith('/api/dashboard')){
+    const query=new URLSearchParams(path.split('?')[1]||'');
+    return gas_('getDashboard',token,query.get('organization')||'',query.get('role')||'');
+  }
+  if(path==='/api/submit')return gas_('submitSurvey',payload);
+  if(path==='/api/batches')return gas_('getBatches',token);
+  if(path==='/api/import/preview')return gas_('previewCsv',token,payload);
+  if(path==='/api/import/commit')return gas_('commitCsv',token,payload);
+  if(path==='/api/export.csv')return gas_('getExportCsv',token);
+  if(path==='/api/template.csv')return gas_('getTemplateCsv',token);
+  throw Error('Tác vụ chưa hỗ trợ trong bản miễn phí trực tuyến.');
+}
+function downloadText(name,text){
+  const url=URL.createObjectURL(new Blob([text],{type:'text/csv;charset=utf-8'}));
+  const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+const roleGroups=()=>String(answers.A02||'');
+function activeQuestion(q,role=roleGroups()) {
+  if(q.branch.includes('Lãnh đạo')||q.branch.includes('quản lý'))return ['2','3'].includes(role);
+  if(q.branch.includes('Chuyên trách'))return ['4','5'].includes(role);
+  return true;
+}
+function saveDraft(){try{localStorage.setItem('fsb_ai_survey_draft',JSON.stringify(answers));}catch{}}
+function loadDraft(){try{let a=JSON.parse(localStorage.getItem('fsb_ai_survey_draft')||'{}');return a&&typeof a==='object'?a:{}}catch{return {}}}
+function nav(tab){
+  $$('.nav-link').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  $$('.page').forEach(p=>p.classList.toggle('active',p.id===tab));
+  $('#breadcrumbName').textContent=({overview:'Tổng quan năng lực AI',survey:'Khảo sát năng lực AI',data:'Quản lý dữ liệu',guide:'Hướng dẫn & phương pháp'})[tab];
+  $('.sidebar').classList.remove('open');
+  if(tab==='overview'&&authenticated)fetchDashboard();
+  if(tab==='data'&&authenticated)fetchBatches();
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function updateAuthUI(){
+  $('#authBadge').textContent=authenticated?'Quản trị FSB':'Chế độ khách';
+  $('#adminSessionBtn').textContent=authenticated?'Đăng xuất quản trị':'Đăng nhập quản trị';
+  $('#loginPanel').hidden=authenticated;
+  $('#dashboardArea').hidden=!authenticated;
+  $('#dataLocked').hidden=authenticated;
+  $('#dataArea').hidden=!authenticated;
+}
+async function fetchAuth(){try{const s=await api('/api/me');authenticated=s.authenticated;csrf=s.csrf||'';updateAuthUI();if(authenticated)await fetchDashboard()}catch(e){toast(e.message)}}
+async function login(e){e.preventDefault();$('#loginError').textContent='';try{let r=await api('/api/login',{method:'POST',body:JSON.stringify({password:$('#adminPassword').value})});csrf=r.csrf;authenticated=true;$('#adminPassword').value='';updateAuthUI();toast('Đăng nhập thành công.');await fetchDashboard()}catch(e){$('#loginError').textContent=e.message}}
+async function logout(){try{await api('/api/logout',{method:'POST',body:'{}'});}catch{}authenticated=false;csrf='';updateAuthUI();nav('overview');toast('Đã đăng xuất quản trị.')}
+function initFilters(data){
+  let o=$('#filterOrg'),r=$('#filterRole'),oldO=o.value,oldR=r.value;
+  const roleNames=Object.fromEntries((questions.find(q=>q.id==='A02')?.options||[]).map(o=>[o.value,o.label]));
+  o.innerHTML='<option value="">Tất cả cơ quan / đơn vị</option>'+data.filters.organizations.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');
+  r.innerHTML='<option value="">Tất cả nhóm vị trí</option>'+data.filters.roles.map(x=>`<option value="${esc(x)}">${esc(roleNames[x]||x)}</option>`).join('');
+  o.value=oldO;r.value=oldR;
+}
+async function fetchDashboard(){
+  if(!authenticated)return;
+  try{
+    const query=new URLSearchParams({organization:$('#filterOrg').value,role:$('#filterRole').value});
+    const data=await api('/api/dashboard?'+query);
+    latestDashboard=data;initFilters(data);renderDashboard(data);
+  }catch(e){toast(e.message);if(e.message.includes('đăng nhập')){authenticated=false;updateAuthUI()}}
+}
+function renderDashboard(data){
+  $('#kpiResponses').textContent=data.n;
+  $('#smallSample').hidden=!data.suppressed;
+  $('#smallSample').textContent=data.suppressed?(data.n===0?'Chưa có phản hồi cho bộ lọc hiện tại. Hãy gửi phiếu khảo sát cho các đơn vị trước khi phân tích.':data.message):'';
+  $('#kpiOrgs').textContent=data.suppressed?'—':data.organizations;
+  $('#kpiUsage').textContent=data.suppressed?'—':percent(data.frequent_ai_rate);
+  $('#kpiCases').textContent=data.suppressed?'—':percent(data.situation_rate);
+  if(data.suppressed){
+    $('#radarChart').innerHTML='<div class="empty-chart">Chưa đủ 5 phản hồi hợp lệ để hiển thị Radar Chart.</div>';
+    $('#demandBars').innerHTML='<div class="empty-chart">Chưa đủ dữ liệu để xếp hạng chủ đề học.</div>';
+    $('#caseBars').innerHTML='<div class="empty-chart">Chưa có dữ liệu tình huống được công bố.</div>';
+    $('#barriersList').innerHTML='<div class="empty-chart">Chưa đủ dữ liệu về rào cản.</div>';
+    $('#insightText').textContent='Chỉ đưa ra đề xuất khi có tối thiểu 5 phản hồi hợp lệ trong nhóm và đã đối chiếu nhu cầu học với nhiệm vụ công việc.';
+    $('#axisTable').innerHTML='';return;
+  }
+  drawRadar(data.radar,data.all_radar||[]);
+  const demands=data.demands||[];
+  $('#demandBars').innerHTML=demands.length?demands.slice(0,6).map((d,i)=>`<div class="bar-item"><div class="bar-top"><span>${i+1}. ${esc(d.name)}</span><b>${percent(d.rate)}</b></div><div class="bar-bg"><div class="bar-fill" data-width="${Math.min(100,d.rate)}"></div></div><div class="bar-note">${d.n} người lựa chọn</div></div>`).join(''):'<div class="empty-chart">Không có chủ đề đã chọn.</div>';
+  $('#caseBars').innerHTML=data.situation.map(s=>`<div class="case-mini" title="${esc(s.name)}"><div class="case-code">${esc(s.code)} · n=${s.n}</div><div class="case-value">${percent(s.rate)}</div><div class="case-line"><i data-width="${s.rate||0}"></i></div></div>`).join('');
+  $('#barriersList').innerHTML=(data.barriers||[]).map((d,i)=>`<div class="barrier-item"><span class="barrier-rank">${i+1}</span><span class="barrier-text">${esc(d.name)}</span><strong>${percent(d.rate)}</strong></div>`).join('')||'<div class="empty-chart">Chưa có rào cản được chọn.</div>';
+  $$('[data-width]').forEach(x=>x.style.width=Number(x.dataset.width)+'%');
+  const weakest=data.radar.filter(x=>x.value!==null).slice().sort((a,b)=>a.value-b.value).slice(0,2);
+  $('#insightText').textContent=`Nhóm cần được đối chiếu sâu: ${weakest.map(x=>x.name).join(' và ')||'chưa xác định'}. ${demands[0]?'Chủ đề được quan tâm nhiều: '+demands[0].name+'. ':''}Chỉ lựa chọn chương trình sau khi đọc thêm ý kiến mở, mức áp dụng công việc và rào cản thực tế; không suy ra nhu cầu chỉ từ điểm radar.`;
+  $('#axisTable').innerHTML='<table class="axis-table"><thead><tr><th>Nhóm năng lực</th><th>Điểm tự đánh giá</th><th>Phản hồi hợp lệ</th></tr></thead><tbody>'+data.radar.map(s=>`<tr><td>${esc(s.name)}</td><td>${s.value===null?'N/A':s.value.toFixed(2)+' / 4'}</td><td>n = ${s.n}</td></tr>`).join('')+'</tbody></table>';
+}
+function drawRadar(selected,baseline){
+  const w=560,h=385,cx=280,cy=189,r=127,N=7, ringLines=[];
+  const xy=(k,v)=>{const angle=-Math.PI/2+2*Math.PI*k/N;return [cx+Math.cos(angle)*r*v/4,cy+Math.sin(angle)*r*v/4]};
+  let svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="Biểu đồ radar năng lực AI với bảy trục">`;
+  for(let lv=1;lv<=4;lv++){
+    const pts=selected.map((_,k)=>xy(k,lv).map(v=>v.toFixed(1)).join(',')).join(' ');
+    svg+=`<polygon points="${pts}" fill="${lv%2===0?'#f8f9fd':'#fff'}" stroke="#e5eaf1" stroke-width="1"/>`;
+    svg+=`<text x="${cx+5}" y="${cy-r*lv/4-4}" font-size="9" fill="#afb8c7">${lv}</text>`;
+  }
+  for(let k=0;k<N;k++){
+    let p=xy(k,4);svg+=`<line x1="${cx}" y1="${cy}" x2="${p[0]}" y2="${p[1]}" stroke="#e2e8f1" stroke-width="1"/>`;
+  }
+  function series(data,color,fill,width,dash){
+    if(!data||!data.length)return '';
+    const vals=data.map(o=>o.value),valid=vals.every(v=>v!==null&&v!==undefined);
+    let out='';
+    const points=vals.map((v,k)=>v===null||v===undefined?null:xy(k,Math.max(0,Math.min(4,v))).map(t=>t.toFixed(1)).join(','));
+    if(valid)out+=`<polygon points="${points.join(' ')}" fill="${fill}" stroke="${color}" stroke-width="${width}" stroke-linejoin="round" ${dash?`stroke-dasharray="${dash}"`:''}/>`;
+    else{
+      for(let k=0;k<points.length-1;k++)if(points[k]&&points[k+1]){out+=`<polyline points="${points[k]} ${points[k+1]}" fill="none" stroke="${color}" stroke-width="${width}"/>`}
+    }
+    for(let k=0;k<points.length;k++)if(points[k]){let p=points[k].split(',');out+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.7" fill="${color}" stroke="#fff" stroke-width="1.5"><title>${esc(data[k].name)}: ${data[k].value} / 4, n=${data[k].n}</title></circle>`}
+    return out;
+  }
+  svg+=series(baseline,'#84a7d7','#679bd01a','1.8','5 4');
+  svg+=series(selected,'#df4264','#df426425','2.6','');
+  for(let k=0;k<N;k++){
+    let angle=-Math.PI/2+2*Math.PI*k/N;
+    let x=cx+Math.cos(angle)*(r+57),y=cy+Math.sin(angle)*(r+37),name=selected[k].name;
+    let parts=name.includes(' & ')?name.split(' & '):name==='Quy trình & tự động hóa'?['Quy trình','& tự động hóa']:name==='Kiểm chứng & an toàn'?['Kiểm chứng','& an toàn']:[name];
+    if(parts.length===1&&parts[0].length>17){let mid=Math.floor(parts[0].length/2),cut=parts[0].indexOf(' ',mid-5);if(cut>0)parts=[parts[0].slice(0,cut),parts[0].slice(cut+1)]}
+    let anchor=x<cx-16?'end':x>cx+16?'start':'middle';
+    svg+=`<text x="${x.toFixed(1)}" y="${(y-(parts.length-1)*5).toFixed(1)}" font-size="10" fill="#718099" text-anchor="${anchor}" font-weight="600">`+parts.map((p,i)=>`<tspan x="${x.toFixed(1)}" dy="${i?13:0}">${esc(p)}</tspan>`).join('')+`</text>`;
+  }
+  svg+='</svg>';$('#radarChart').innerHTML=svg;
+}
+function stepQuestions(step){
+  const key=STEPS[step].label;
+  return questions.filter(q=>q.id.startsWith(key)&&activeQuestion(q));
+}
+function drawQuestion(q){
+  const val=answers[q.id],required=q.required?'<span class="star">*</span>':'';
+  let html=`<div class="question" data-question="${esc(q.id)}"><div class="question-head"><span class="question-id">${esc(q.id)}</span><div class="question-label">${esc(q.text)}${required}</div></div>`;
+  if(q.max_select)html+=`<div class="question-note">Chọn tối đa ${q.max_select} phương án.</div>`;
+  if(q.type.startsWith('Lưới'))html+=`<div class="question-note">${q.type.includes('năng lực')?'0 = chưa biết · 4 = có thể tối ưu/hướng dẫn người khác':'Tần suất trong tháng gần nhất'} · Có phương án không thuộc nhiệm vụ.</div>`;
+  if(q.type==='Trả lời ngắn')html+=`<input class="text-answer" data-code="${esc(q.id)}" type="text" maxlength="150" value="${esc(val||'')}" placeholder="Nhập tên cơ quan/đơn vị..." />`;
+  else if(q.type==='Đoạn văn')html+=`<textarea data-code="${esc(q.id)}" maxlength="1500" placeholder="Mô tả ngắn, không đưa thông tin cá nhân hoặc dữ liệu mật...">${esc(val||'')}</textarea>`;
+  else{
+    const multi=q.type==='Nhiều lựa chọn';
+    html+='<div class="choice-list">'+q.options.map(opt=>{
+      const checked=multi?(Array.isArray(val)&&val.includes(opt.value)):val===opt.value;
+      return `<label class="choice ${checked?'checked':''}"><input type="${multi?'checkbox':'radio'}" data-code="${esc(q.id)}" name="q_${esc(q.id)}" value="${esc(opt.value)}" ${checked?'checked':''}/><span>${esc(opt.label)}</span></label>`;
+    }).join('')+'</div>';
+  }
+  return html+'</div>';
+}
+function renderSurvey(){
+  if(!questions.length)return;
+  if(currentStep===5&&!stepQuestions(5).length){currentStep=4}
+  const step=STEPS[currentStep];
+  $('#stepLabel').textContent=`PHẦN ${step.label} / ${STEPS.length}`;
+  $('#stepTitle').textContent=step.title;$('#stepDesc').textContent=step.desc;
+  $('#surveyQuestions').innerHTML=stepQuestions(currentStep).map(drawQuestion).join('');
+  $('#prevBtn').disabled=currentStep===0;
+  $('#nextBtn').textContent=currentStep===5||currentStep===4&&!stepQuestions(5).length?'Hoàn thành & gửi →':'Tiếp tục →';
+  const progress=Math.round(currentStep/STEPS.length*100);
+  $('#progressPct').textContent=progress+'%';$('#progressFill').style.width=progress+'%';
+  $('#surveyError').textContent='';
+}
+function formChange(e){
+  const input=e.target;const key=input.dataset.code;if(!key)return;
+  const q=questions.find(q=>q.id===key);
+  if(q.type==='Nhiều lựa chọn'){
+    let a=Array.isArray(answers[key])?answers[key].slice():[];
+    if(input.checked){if(q.max_select&&a.length>=q.max_select){input.checked=false;toast(`Câu ${key} chỉ được chọn tối đa ${q.max_select} phương án`);return}a.push(input.value)}
+    else a=a.filter(x=>x!==input.value);
+    answers[key]=a;
+  } else answers[key]=input.value;
+  if(key==='A02'){
+    // Discard hidden role-specific answers whenever respondent changes role.
+    questions.filter(x=>!activeQuestion(x,String(answers.A02))).forEach(x=>delete answers[x.id]);
+  }
+  saveDraft();
+  const block=input.closest('.question');
+  if(block){block.querySelectorAll('.choice').forEach(x=>x.classList.toggle('checked',x.querySelector('input')?.checked||false))}
+}
+function validateStep(step){
+  const errors=[];
+  for(const q of stepQuestions(step)){
+    const v=answers[q.id];
+    const empty=v===undefined||v===null||v===''||(Array.isArray(v)&&v.length===0);
+    if(q.required&&empty)errors.push(q.id);
+    if(q.max_select&&Array.isArray(v)&&v.length>q.max_select)errors.push(q.id);
+  }
+  return errors;
+}
+async function nextStep(){
+  const errs=validateStep(currentStep);
+  if(errs.length){$('#surveyError').textContent=`Vui lòng hoàn thành các câu bắt buộc: ${errs.join(', ')}`;document.querySelector(`[data-question="${errs[0]}"]`)?.scrollIntoView({behavior:'smooth',block:'center'});return}
+  if(currentStep<4||(currentStep===4&&stepQuestions(5).length)){
+    currentStep++;renderSurvey();window.scrollTo({top:0,behavior:'smooth'});return;
+  }
+  $('#nextBtn').disabled=true;$('#nextBtn').textContent='Đang lưu phản hồi...';
+  try{
+    const submission_id=sessionStorage.getItem("fsb_submission_id")||crypto.randomUUID();sessionStorage.setItem("fsb_submission_id",submission_id);
+    const res=await api('/api/submit',{method:'POST',body:JSON.stringify({submission_id,answers})});
+    localStorage.removeItem('fsb_ai_survey_draft');sessionStorage.removeItem('fsb_submission_id');answers={};currentStep=0;
+    $('#surveyFormArea').hidden=true;$('#surveyDone').hidden=false;
+    toast(res.duplicate?'Phản hồi đã được ghi nhận trước đó.':'Phản hồi đã được lưu thành công trên hệ thống.');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }catch(e){$('#surveyError').textContent=e.message;$('#nextBtn').disabled=false;renderSurvey();$('#surveyError').textContent=e.message;}
+}
+function newSurvey(){answers={};currentStep=0;saveDraft();$('#surveyDone').hidden=true;$('#surveyFormArea').hidden=false;renderSurvey()}
+function fileToBase64(file){return file.arrayBuffer().then(buf=>{const a=new Uint8Array(buf);const chunks=[];for(let i=0;i<a.length;i+=8192)chunks.push(String.fromCharCode(...a.subarray(i,i+8192)));return btoa(chunks.join(''))})}
+async function importFile(confirm){
+  const file=$('#uploadFile').files[0];if(!file)return toast('Chọn tệp phản hồi trước.');
+  if(!file.name.toLowerCase().endsWith('.csv'))return toast('Hãy dùng CSV UTF-8.');
+  if(file.size>700000)return toast('Tệp CSV tối đa 700 KB/lượt, hãy chia thành nhiều phần.');
+  $('#importResult').classList.remove('error');
+  try{
+    const data=await fileToBase64(file);lastImport={filename:file.name,data};
+    const payload={...lastImport,...(confirm?{confirmed:true}:{})};
+    const result=await api(confirm?'/api/import/commit':'/api/import/preview',{method:'POST',body:JSON.stringify(payload)});
+    $('#importResult').innerHTML=`<strong>${confirm?'Đã nhập dữ liệu':'Kết quả kiểm tra'}</strong><div>Tổng số dòng: <b>${result.total}</b> · Hợp lệ: <b>${result.valid}</b> · Lỗi: <b>${result.invalid}</b>${confirm?` · Nhập mới: <b>${result.imported}</b> · Trùng tệp đã nhập: <b>${result.duplicates}</b>`:''}</div><div>Cột nhận diện: ${esc(result.mapped_columns.join(', '))}</div>`+(result.problems.length?`<p>Một số lỗi: ${result.problems.map(x=>'Dòng '+x.row+': '+x.errors.join('; ')).map(esc).join(' | ')}</p>`:'');
+    $('#confirmImport').disabled=confirm||!result.valid;
+    if(confirm){toast('Đã cập nhật dữ liệu, giữ nguyên các phản hồi trước đó.');await fetchBatches();await fetchDashboard()}
+  }catch(e){$('#importResult').classList.add('error');$('#importResult').textContent=e.message;$('#confirmImport').disabled=true}
+}
+async function fetchBatches(){if(!authenticated)return;try{const r=await api('/api/batches');$('#batchTable').innerHTML=r.batches.length?'<table class="data-table"><thead><tr><th>Thời điểm</th><th>Tệp nguồn</th><th>Nhập mới</th><th>Trùng</th><th>Lỗi</th></tr></thead><tbody>'+r.batches.map(b=>`<tr><td>${esc(new Date(b.created_at).toLocaleString('vi-VN'))}</td><td>${esc(b.filename)}</td><td>${b.imported}</td><td>${b.duplicates}</td><td>${b.invalid}</td></tr>`).join('')+'</tbody></table>':'Chưa có đợt nhập dữ liệu nào.'}catch(e){toast(e.message)}}
+async function init(){
+  $$('.nav-link').forEach(b=>b.addEventListener('click',()=>nav(b.dataset.tab)));
+  $('#menuBtn').addEventListener('click',()=>$('.sidebar').classList.toggle('open'));
+  $('#loginForm').addEventListener('submit',login);
+  $('#adminSessionBtn').addEventListener('click',()=>authenticated?logout():nav('overview'));
+  $('#dataLoginBtn').addEventListener('click',()=>nav('overview'));
+  $('#refreshBtn').addEventListener('click',fetchDashboard);
+  $('#filterOrg').addEventListener('change',fetchDashboard);
+  $('#filterRole').addEventListener('change',fetchDashboard);
+  $('#printBtn').addEventListener('click',()=>authenticated?window.print():toast('Đăng nhập để xuất báo cáo.'));
+  $('#prevBtn').addEventListener('click',()=>{if(currentStep>0){currentStep--;renderSurvey();window.scrollTo({top:0,behavior:'smooth'})}});
+  $('#nextBtn').addEventListener('click',nextStep);
+  $('#surveyQuestions').addEventListener('change',formChange);
+  $('#surveyQuestions').addEventListener('input',e=>{if(e.target.matches('.text-answer,textarea'))formChange(e)});
+  $('#newSurveyBtn').addEventListener('click',newSurvey);
+  $('#previewImport').addEventListener('click',()=>importFile(false));
+  $('#confirmImport').addEventListener('click',()=>importFile(true));
+  $('#refreshBatches').addEventListener('click',fetchBatches);
+  $('#uploadFile').addEventListener('change',()=>{$('#confirmImport').disabled=true;$('#importResult').textContent=''});
+  $('#exportLink').addEventListener('click',async e=>{e.preventDefault();try{downloadText('fsb_ai_responses.csv',await api('/api/export.csv'))}catch(err){toast(err.message)}});
+  $('#templateLink').addEventListener('click',async e=>{e.preventDefault();try{downloadText('fsb_ai_template.csv',await api('/api/template.csv'))}catch(err){toast(err.message)}});
+  // Tự cập nhật số liệu mỗi phút khi quản trị đang mở Dashboard.
+  setInterval(()=>{if(authenticated&&$('#overview').classList.contains('active')&&!document.hidden)fetchDashboard()},60000);
+  try{const data=await api('/api/questions');questions=data.questions;axes=data.axes;answers=loadDraft();renderSurvey();await fetchAuth();nav('survey')}catch(e){toast('Không thể khởi tạo website: '+e.message)}
+}
+init();
+
+</script>
+</body>
+</html>
